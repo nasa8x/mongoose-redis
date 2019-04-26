@@ -1,0 +1,38 @@
+{
+  "name": "mongoose-redis",
+  "version": "1.0.9",
+  "description": "Mongoose Cache: Integrated Redis caching for Mongoose queries.",
+  "author": {
+    "name": "Nasa8x"    
+  },
+  "license": "MIT",
+  "dependencies": {
+    "mix-hash": "^1.0.5",
+    "redis": "^2.8.0"
+  },
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nasa8x/mongoose-redis.git"
+  },
+  "keywords": [
+    "mongoose cache",
+    "mongodb cache",
+    "mongoose redis",
+    "mongoose",
+    "redis mongoose",
+    "redis mongodb",
+    "redis mongo",
+    "redis",
+    "cache",
+    "cached",
+    "caching",
+    "performance",
+    "mongodb cache",
+    "mongodb",
+    "redis cache",
+    "mongo cache",
+    "node cache",
+    "nosql"
+  ]
+}
