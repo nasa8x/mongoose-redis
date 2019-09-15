@@ -33,7 +33,9 @@ module.exports = function (mongoose, option) {
         }
 
         const result = await exec.apply(this, arguments);
-        client.set(key, JSON.stringify(result), "EX", this._ttl);
+        if(result){
+            client.set(key, JSON.stringify(result), "EX", this._ttl);
+        }
         return result;
     }
 }
