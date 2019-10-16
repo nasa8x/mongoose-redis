@@ -29,7 +29,7 @@ module.exports = function (mongoose, option) {
         if (cached) {
             // console.log(`[LOG] Serving from cache`);
             let conditions = this._fields
-            delete conditions["_id"]
+            if(conditions) delete conditions["_id"]
 
             const doc = JSON.parse(cached);
             return Array.isArray(doc) ? doc.map(d => new this.model(d, conditions)) : new this.model(doc, conditions);
