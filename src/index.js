@@ -28,8 +28,11 @@ module.exports = function (mongoose, option) {
         const cached = await client.get(key);
         if (cached) {
             // console.log(`[LOG] Serving from cache`);
+            let conditions = this._fields
+            delete conditions["_id"]
+
             const doc = JSON.parse(cached);
-            return Array.isArray(doc) ? doc.map(d => new this.model(d)) : new this.model(doc);
+            return Array.isArray(doc) ? doc.map(d => new this.model(d, conditions)) : new this.model(doc, conditions);
         }
 
         const result = await exec.apply(this, arguments);
