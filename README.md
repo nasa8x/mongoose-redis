@@ -48,3 +48,19 @@ app.get('/detail/:id', async (req, res)=> {
 
 ```
 
+```js
+
+Post.findById("5dbfac4d7d3ff31acb86d870").cache(60).then(result => {
+        console.log(result);
+    });
+
+```
+
+```js
+
+Post.findOne({ _id: '5dbfac4d7d3ff31acb86d870' }).cache(60).then(result => {
+        console.log(result);
+    });
+
+```
+
